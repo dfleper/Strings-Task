@@ -5,6 +5,10 @@ Creada por el **Grupo 5** como parte de una actividad en clase de Desarrollo Web
 
 ---
 
+https://github.com/user-attachments/assets/6e7ccf4c-204c-481c-b7bb-55802ba1add5
+
+---
+
 ## 🚀 Características
 
 - 📚 Tarjetas con métodos de string y ejemplos.
@@ -27,7 +31,7 @@ Creada por el **Grupo 5** como parte de una actividad en clase de Desarrollo Web
 ## 2️⃣ Instalación
 
 
-### 1. Clona el repositorio
+### 1. Clona el repositorio (Original)
 ```bash
 git clone https://github.com/ClaseString/Strings-Task.git
 ```
