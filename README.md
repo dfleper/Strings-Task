@@ -66,10 +66,10 @@ https://strings-task.netlify.app/
 Proyecto desarrollado por el **Grupo 5** – *Dream Team* 💻✨
 
 ### Integrantes:
-- 👩‍💻 Adán Pérez
-- 👨‍💻 Domingo Fleitas
-- 👩‍💻 Javier Cordero
-- 👨‍💻 Kevin Jiménez
+- 👩‍💻 Adán Pérez https://github.com/Adan-Perez
+- 👨‍💻 Domingo Fleitas https://github.com/dfleper
+- 👩‍💻 Javier Cordero https://github.com/javi-dev-79
+- 👨‍💻 Kevin Jiménez https://github.com/KevinJG994
 
 ---
 
