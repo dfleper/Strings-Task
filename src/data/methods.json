@@ -1,0 +1,296 @@
+[
+    {
+        "title": "split",
+        "description": "Este método separa una cadena en un arreglo de subcadenas, basándose en un separador especificado.",
+        "example": "'hola mundo'.split(' ') // ['hola', 'mundo']",
+        "parameters": [
+            {
+                "label": "Separador:",
+                "placeholder": "Ej. \",\"",
+                "defaultValue": " ",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => JSON.stringify(str.split(params[0] || ' '))",
+        "icon": "SquareSplitHorizontal"
+    },
+    {
+        "title": "toLowerCase",
+        "description": "Convierte todos los caracteres de una cadena a minúsculas.",
+        "example": "'Hola Mundo'.toLowerCase() // 'hola mundo'",
+        "handler": "(str) => str.toLowerCase()",
+        "icon": "CaseLower"
+    },
+    {
+        "title": "toUpperCase",
+        "description": "Convierte todos los caracteres de una cadena a mayúsculas.",
+        "example": "'Hola Mundo'.toUpperCase() // 'HOLA MUNDO'",
+        "handler": "(str) => str.toUpperCase()",
+        "icon": "CaseUpper"
+    },
+    {
+        "title": "charAt",
+        "description": "Devuelve el carácter en una posición específica dentro de una cadena.",
+        "example": "'Hola Mundo'.charAt(4) // 'o'",
+        "parameters": [
+            {
+                "label": "Índice:",
+                "placeholder": "Ej. 0",
+                "defaultValue": "0",
+                "type": "number"
+            }
+        ],
+        "handler": "(str, params) => str.charAt(parseInt(params[0]) || 0)",
+        "icon": "WholeWord"
+    },
+    {
+        "title": "charCodeAt",
+        "description": "Devuelve el valor Unicode de un carácter en una posición específica.",
+        "example": "'Hola'.charCodeAt(0) // 72",
+        "parameters": [
+            {
+                "label": "Índice:",
+                "placeholder": "Ej. 0",
+                "defaultValue": "0",
+                "type": "number"
+            }
+        ],
+        "handler": "(str, params) => str.charCodeAt(parseInt(params[0]) || 0)",
+        "icon": "Barcode"
+    },
+    {
+        "title": "concat",
+        "description": "Se utiliza para concatenar dos o más cadenas y devolver una nueva cadena.",
+        "example": "'Hola'.concat(' Mundo') // 'Hola Mundo'",
+        "parameters": [
+            {
+                "label": "Texto a concatenar:",
+                "placeholder": "Ej. ' Mundo'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.concat(params[0] || '')",
+        "icon": "Link"
+    },
+    {
+        "title": "indexOf",
+        "description": "Devuelve el índice de la primera aparición de un valor dentro de una cadena. Si no lo encuentra, devuelve -1.",
+        "example": "'Hola Mundo'.indexOf('Mundo') // 5",
+        "parameters": [
+            {
+                "label": "Texto a buscar:",
+                "placeholder": "Ej. 'Mundo'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.indexOf(params[0] || '')",
+        "icon": "ArrowRightCircle"
+    },
+    {
+        "title": "lastIndexOf",
+        "description": "Devuelve el índice de la última aparición de un valor dentro de una cadena.",
+        "example": "'Hola Mundo Mundo'.lastIndexOf('Mundo') // 10",
+        "parameters": [
+            {
+                "label": "Texto a buscar:",
+                "placeholder": "Ej. 'Mundo'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.lastIndexOf(params[0] || '')",
+        "icon": "ArrowLeftCircle"
+    },
+    {
+        "title": "includes",
+        "description": "Determina si una cadena contiene otra cadena o valor, devolviendo true o false.",
+        "example": "'Hola Mundo'.includes('Mundo') // true",
+        "parameters": [
+            {
+                "label": "Texto a buscar:",
+                "placeholder": "Ej. 'Mundo'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.includes(params[0] || '')",
+        "icon": "Search"
+    },
+    {
+        "title": "replace",
+        "description": "Reemplaza una subcadena o patrón en una cadena con una nueva subcadena.",
+        "example": "'Hola Mundo'.replace('Mundo', 'JavaScript') // 'Hola JavaScript'",
+        "parameters": [
+            {
+                "label": "Buscar:",
+                "placeholder": "Ej. 'Mundo'",
+                "type": "string"
+            },
+            {
+                "label": "Reemplazar por:",
+                "placeholder": "Ej. 'JavaScript'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.replace(params[0] || '', params[1] || '')",
+        "icon": "Replace"
+    },
+    {
+        "title": "match",
+        "description": "Busca una coincidencia en la cadena utilizando una expresión regular y devuelve un arreglo con las coincidencias encontradas.",
+        "example": "'Hola Mundo'.match(/o/) // ['o']",
+        "parameters": [
+            {
+                "label": "Expresión regular:",
+                "placeholder": "Ej. /o/g",
+                "type": "regex"
+            }
+        ],
+        "handler": "(str, params) => JSON.stringify(str.match(new RegExp(params[0])))",
+        "icon": "ListChecks"
+    },
+    {
+        "title": "search",
+        "description": "Realiza una búsqueda en la cadena utilizando una expresión regular, devolviendo el índice de la primera coincidencia.",
+        "example": "'Hola Mundo'.search(/Mundo/) // 5",
+        "parameters": [
+            {
+                "label": "Expresión regular:",
+                "placeholder": "Ej. /Mundo/",
+                "type": "regex"
+            }
+        ],
+        "handler": "(str, params) => str.search(new RegExp(params[0]))",
+        "icon": "Search"
+    },
+    {
+        "title": "slice",
+        "description": "Extrae una sección de una cadena y la devuelve como una nueva cadena, sin modificar la original.",
+        "example": "'Hola Mundo'.slice(0, 4) // 'Hola'",
+        "parameters": [
+            {
+                "label": "Inicio:",
+                "placeholder": "Ej. 0",
+                "type": "number"
+            },
+            {
+                "label": "Fin:",
+                "placeholder": "Ej. 4",
+                "type": "number"
+            }
+        ],
+        "handler": "(str, params) => str.slice(parseInt(params[0]) || 0, parseInt(params[1]) || undefined)",
+        "icon": "Crop"
+    },
+    {
+        "title": "trim",
+        "description": "Elimina los espacios en blanco al principio y al final de una cadena.",
+        "example": "'   Hola Mundo   '.trim() // 'Hola Mundo'",
+        "handler": "(str) => str.trim()",
+        "icon": "Scissors"
+    },
+    {
+        "title": "padStart",
+        "description": "Rellena el principio de una cadena con otro valor hasta alcanzar una longitud específica.",
+        "example": "'5'.padStart(3, '0') // '005'",
+        "parameters": [
+            {
+                "label": "Longitud:",
+                "placeholder": "Ej. 3",
+                "type": "number"
+            },
+            {
+                "label": "Relleno:",
+                "placeholder": "Ej. '0'",
+                "defaultValue": " ",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.padStart(parseInt(params[0]) || 0, params[1] || ' ')",
+        "icon": "AlignLeft"
+    },
+    {
+        "title": "padEnd",
+        "description": "Rellena el final de una cadena con otro valor hasta alcanzar una longitud específica.",
+        "example": "'5'.padEnd(3, '0') // '500'",
+        "parameters": [
+            {
+                "label": "Longitud:",
+                "placeholder": "Ej. 3",
+                "type": "number"
+            },
+            {
+                "label": "Relleno:",
+                "placeholder": "Ej. '0'",
+                "defaultValue": " ",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.padEnd(parseInt(params[0]) || 0, params[1] || ' ')",
+        "icon": "AlignRight"
+    },
+    {
+        "title": "substr",
+        "description": "Extrae una subcadena de una cadena, comenzando en una posición especificada y con una longitud determinada.",
+        "example": "'Hola Mundo'.substr(0, 4) // 'Hola'",
+        "parameters": [
+            {
+                "label": "Inicio:",
+                "placeholder": "Ej. 0",
+                "type": "number"
+            },
+            {
+                "label": "Longitud:",
+                "placeholder": "Ej. 4",
+                "type": "number"
+            }
+        ],
+        "handler": "(str, params) => str.substr(parseInt(params[0]) || 0, parseInt(params[1]) || undefined)",
+        "icon": "Scissors"
+    },
+    {
+        "title": "substring",
+        "description": "Extrae una subcadena entre dos índices especificados (sin incluir el índice final).",
+        "example": "'Hola Mundo'.substring(0, 4) // 'Hola'",
+        "parameters": [
+            {
+                "label": "Inicio:",
+                "placeholder": "Ej. 0",
+                "type": "number"
+            },
+            {
+                "label": "Fin:",
+                "placeholder": "Ej. 4",
+                "type": "number"
+            }
+        ],
+        "handler": "(str, params) => str.substring(parseInt(params[0]) || 0, parseInt(params[1]) || undefined)",
+        "icon": "Scissors"
+    },
+    {
+        "title": "startsWith",
+        "description": "Determina si una cadena comienza con un valor específico.",
+        "example": "'Hola Mundo'.startsWith('Hola') // true",
+        "parameters": [
+            {
+                "label": "Texto:",
+                "placeholder": "Ej. 'Hola'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.startsWith(params[0] || '')",
+        "icon": "ArrowRightCircle"
+    },
+    {
+        "title": "endsWith",
+        "description": "Determina si una cadena termina con un valor específico.",
+        "example": "'Hola Mundo'.endsWith('Mundo') // true",
+        "parameters": [
+            {
+                "label": "Texto:",
+                "placeholder": "Ej. 'Mundo'",
+                "type": "string"
+            }
+        ],
+        "handler": "(str, params) => str.endsWith(params[0] || '')",
+        "icon": "ArrowLeftCircle"
+    }
+]

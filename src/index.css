@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+  themes: all;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-base-200);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #00ffff 90deg,
+    transparent 180deg,
+    #00ffff 270deg,
+    transparent 360deg
+  );
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+  opacity: 0.2;
+  transform: rotate(0deg);
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  opacity: 3;
+  animation: rotate-border 3s linear infinite;
+}
+
+@keyframes rotate-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-letter-loop {
+  display: inline-block;
+  color: #00eaff;
+  opacity: 0;
+  animation: neon-letter 0.3s ease-in-out forwards;
+  text-shadow:
+    0 0 5px #00eaff,
+    0 0 10px #00eaff,
+    0 0 15px #00eaff;
+}
+
+@keyframes neon-letter {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.neon-letter-static {
+  display: inline-block;
+  color: #00eaff;
+  text-shadow:
+    0 0 5px #00eaff,
+    0 0 10px #00eaff,
+    0 0 15px #00eaff;
+}
+
+.dimmed-letter {
+  display: inline-block;
+  color: #64748b;
+}
